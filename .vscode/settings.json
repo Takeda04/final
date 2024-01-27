@@ -5,7 +5,7 @@
     {
       "format": "compressed",
       "extensionName": ".css",
-      "savePath": "src/dist",
+      "savePath": "/src/dist",
       "savePathReplacementPairs": null
     }
   ],
