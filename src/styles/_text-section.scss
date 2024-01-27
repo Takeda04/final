@@ -1,0 +1,150 @@
+@import "./kit/mixins.scss";
+
+@import "./kit/variables.scss";
+.main {
+  @include flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 241px;
+  padding-bottom: 211px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  &_title {
+    @include flex-flexdirect_column-ali_s-jc_s;
+    &_img {
+      @include flex-ali_s-jc_s;
+      gap: 29px;
+      & img {
+        transition: 0.9s;
+        cursor: pointer;
+      }
+      & img:hover {
+        transform: rotateY(360deg);
+      }
+      & h1 {
+        color: #b896ff;
+        font-family: $font-family-proppins;
+        position: relative;
+        z-index: 999;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 72px; /* 150% */
+        text-transform: uppercase;
+      }
+    }
+    & p {
+      color: #464547;
+      position: relative;
+      z-index: 999;
+      font-family: $font-family-sans-pro-sans-pro;
+      font-size: 24px;
+      font-style: normal;
+      margin-top: 29px;
+      font-weight: 400;
+      line-height: 32px; /* 133.333% */
+    }
+  }
+  &_img {
+    width: 400px;
+    &_puple {
+      position: absolute;
+      top: 7px;
+      right: 0px;
+    }
+    &_circle1 {
+      position: absolute;
+      left: 123px;
+      top: 89px;
+    }
+    &_circle2 {
+      position: absolute;
+      left: 89px;
+      bottom: 112px;
+    }
+    &_circle3 {
+      position: absolute;
+      top: 89px;
+      right: 660px;
+    }
+    &_circle4 {
+      position: absolute;
+      bottom: 85px;
+      right: 575px;
+    }
+  }
+}
+.text_section {
+  @include flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 120px;
+  padding-bottom: 98px;
+  background-color: #e4eaf0;
+  flex-direction: column;
+  & h1 {
+    color: #464547;
+    text-align: center;
+    font-family: $font-family-proppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 133.333% */
+  }
+  & h2 {
+    color: #666;
+    text-align: center;
+    font-family: $font-family-proppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 38px;
+    line-height: 32px; /* 133.333% */
+  }
+  &_desc {
+    @include flex-alis;
+    margin-top: 46px;
+    gap: 83px;
+    & p {
+      width: 545px;
+      text-align: left;
+      color: #666;
+      font-family: $font-family-sans-pro-sans-pro;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 137.5% */
+    }
+  }
+  &_btn {
+    @include flex;
+    margin-top: 51px;
+    & button {
+      width: 115px;
+      height: 36px;
+      flex-shrink: 0;
+      border-radius: 18px;
+      background: #4ccfff;
+      color: #fff;
+      text-align: center;
+      font-family: $font-family-oswald;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 185.714% */
+      letter-spacing: 1.4px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      transform-origin: left bottom;
+    }
+    & button:hover{
+      transform: rotate(10deg);
+    }
+
+  }
+}
+.main_mobile {
+  display: none;
+}

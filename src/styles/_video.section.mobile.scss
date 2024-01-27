@@ -1,0 +1,69 @@
+@import "./kit/mixins.scss";
+
+@import "./kit/variables.scss";
+@media (max-width: 768px) {
+  .video_section {
+    display: none;
+  }
+  .video_mobile_section {
+    background: #fff;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding-top: 91px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    &_pk {
+      @include flex;
+      position: relative;
+      &_Learn {
+        position: absolute;
+        top: 70px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: #7b61ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & button{
+          border: none;
+          background-color: inherit;
+          color: #fff;
+          font-size: 40px;
+          position: relative;
+          top: 4px;
+          left: 4px;
+        } 
+      }
+      &_Learn:hover{
+        background-color: #FFF;
+        &:hover button{
+          color: #7b61ff;
+        }
+      }
+    }
+    & h1 {
+      color: #464547;
+      text-align: center;
+
+      font-family: $font-family-proppins;
+      font-size: 37px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 53px; /* 143.243% */
+    }
+    & p {
+      color: #464547;
+      text-align: center;
+      font-size: 24px;
+
+      font-family: $font-family-sans-pro-sans-pro;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px; /* 133.333% */
+    }
+  }
+}

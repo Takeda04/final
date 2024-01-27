@@ -1,0 +1,41 @@
+.nav_mobile {
+  padding-left: 32px;
+  padding-right: 32px;
+  &_menu.active {
+    left: 0px;
+  }
+  &_menu {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: -2000px;
+    background-color: #fff;
+    transition: 0.8s;
+    z-index: 999;
+    &_ul {
+      @include flex-mobile-menu;
+      padding-left: 20px;
+      padding-top: 20px;
+      gap: 20px;
+      &_li {
+        list-style: none;
+        &_a {
+          color: #000;
+          font-family: $font-family-sans-pro-sans-pro;
+          text-decoration: none;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 114.286% */
+          letter-spacing: 2.8px;
+          text-transform: uppercase;
+        }
+        &_a:hover {
+          border-bottom: 2px solid #fff;
+          padding-bottom: 6px;
+        }
+      }
+    }
+  }
+}

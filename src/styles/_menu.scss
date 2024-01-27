@@ -1,0 +1,25 @@
+.nav_menu {
+  &_ul {
+    width: 100%;
+    @include flex;
+    gap: 32px;
+    &_li {
+      list-style: none;
+      &_a {
+        color: #fff;
+        font-family: $font-family-sans-pro-sans-pro;
+        text-decoration: none;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+      }
+      &_a:hover {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 6px;
+      }
+    }
+  }
+}

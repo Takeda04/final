@@ -1,0 +1,73 @@
+@import "./kit/mixins.scss";
+@import "./kit/variables.scss";
+.nav_mobile {
+  width: 90%;
+  @include flex-bettwen;
+  &_logo h1 {
+    color: #fff;
+    font-family: $font-family-sans-pro-sans-pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 80% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  &_none {
+    opacity: 0;
+  }
+  .menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+  }
+  .line {
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding-bottom: 100px;
+    overflow-x: clip;
+  }
+  .nav_mobile {
+    display: flex;
+  }
+}

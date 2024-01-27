@@ -1,0 +1,13 @@
+// .vscode/settings.json
+
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "src/dist",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveServer.settings.port": 5501
+}

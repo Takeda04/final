@@ -1,0 +1,99 @@
+@import "./kit/mixins.scss";
+
+@import "./kit/variables.scss";
+@media (max-width: 768px) {
+  .main {
+    display: none;
+  }
+  .main_mobile {
+    @include flex-flexdirect_column;
+    position: relative;
+    width: 100%;
+    &_title {
+      @include flex-flexdirect_column;
+      &_img {
+        @include flex-flexdirect_column;
+        text-align: center;
+        margin-top: 114px;
+        & img {
+          transition: 0.9s;
+          cursor: pointer;
+        }
+        & img:hover {
+          transform: rotateY(360deg);
+        }
+        & h1 {
+          color: #fff;
+          text-align: center;
+          font-family: $font-family-oswald;
+          font-size: 50px;
+          position: relative;
+          z-index: 999;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 68px; /* 136% */
+        }
+      }
+
+      & p {
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        font-family: $font-family-sans-pro-sans-pro;
+        font-size: 24px;
+        position: relative;
+        z-index: 999;
+        margin-top: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 133.333% */
+      }
+    }
+    &_img {
+      &_circle1 {
+        position: absolute;
+        bottom: 120px;
+        left: -105px;
+        transform: rotate(42.155deg);
+      }
+      &_circle1_1 {
+        position: absolute;
+        bottom: -260px;
+        right: -105px;
+        transform: rotate(-52.231deg);
+      }
+      &_circle2 {
+        position: absolute;
+        top: 159px;
+        left: 52px;
+      }
+      &_circle3 {
+        position: absolute;
+        top: 144px;
+        right: 62px;
+      }
+      &_circle4 {
+        position: absolute;
+        top: 430px;
+        right: 46px;
+      }
+      &_circle5 {
+        position: absolute;
+        bottom: 50px;
+        right: 66px;
+      }
+      &_circle6 {
+        position: absolute;
+        bottom: 50px;
+        left: 80px;
+      }
+    }
+  }
+  .text_section_desc {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    & p {
+      width: auto;
+    }
+  }
+}
